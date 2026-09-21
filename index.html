@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M. Rios — Video Editor</title>
+<meta name="description" content="Video editor portfolio — documentary, marketing, gameplay and science & technology work.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▶</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- frame corner markers, camera-framing style -->
+<div class="frame-marks" aria-hidden="true">
+  <span class="fm fm-tl"></span>
+  <span class="fm fm-tr"></span>
+  <span class="fm fm-bl"></span>
+  <span class="fm fm-br"></span>
+</div>
+
+<header class="site-header">
+  <a href="#top" class="logo">M.RIOS<span class="logo-dot">●REC</span></a>
+  <nav class="nav">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="tc-readout" id="tcReadout">00:00:00:00</div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-video-wrap" aria-hidden="true">
+      <iframe
+        class="hero-video"
+        src="https://www.youtube.com/embed/hXjXUwRm4xw?autoplay=1&mute=1&loop=1&playlist=hXjXUwRm4xw&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1"
+        title="Background reel"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen></iframe>
+      <div class="hero-video-overlay"></div>
+    </div>
+
+    <div class="hero-meta hero-meta-left">SRC: BRAZIL → WORLD</div>
+    <div class="hero-meta hero-meta-right">ASPECT 2.39:1</div>
+
+    <h1 class="hero-title">
+      Cinematic<br>
+      edits for a<br>
+      global audience.
+    </h1>
+
+    <p class="hero-sub">
+      I'm M. Rios, a video editor based in Brazil, currently expanding my work
+      to international clients — documentary, marketing, gameplay and
+      science &amp; technology content, cut with rhythm and intent.
+    </p>
+
+    <a href="#work" class="play-cta">
+      <span class="play-icon">▶</span>
+      Watch showreel
+    </a>
+
+    <div class="hero-bottom-bar">
+      <div class="scrub-track"><div class="scrub-fill"></div></div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="section-head">
+      <h2>Selected work</h2>
+      <p class="section-note">A media bin of recent projects, sorted by track.</p>
+    </div>
+
+    <div class="filters" role="tablist" aria-label="Filter projects by category">
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="documentary">Documentary</button>
+      <button class="filter-btn" data-filter="marketing">Marketing &amp; Ads</button>
+      <button class="filter-btn" data-filter="gameplay">Gameplay</button>
+      <button class="filter-btn" data-filter="scitech">Science &amp; Tech</button>
+      <button class="filter-btn" data-filter="music">Music &amp; Motion</button>
+    </div>
+
+    <div class="bin" id="bin">
+
+      <a class="clip" data-cat="documentary" href="https://youtu.be/hXjXUwRm4xw" target="_blank" rel="noopener">
+        <div class="clip-thumb">
+          <img src="https://img.youtube.com/vi/hXjXUwRm4xw/hqdefault.jpg" alt="Documentary demo reel thumbnail" loading="lazy">
+          <span class="clip-play">▶</span>
+        </div>
+        <div class="clip-meta">
+          <h3>Documentary Demo Reel</h3>
+          <p>Showreel · Documentary editing</p>
+          <span class="clip-tag">Documentary</span>
+        </div>
+      </a>
+
+      <a class="clip" data-cat="documentary" href="https://youtu.be/Prpz-odCCyE" target="_blank" rel="noopener">
+        <div class="clip-thumb">
+          <img src="https://img.youtube.com/vi/Prpz-odCCyE/hqdefault.jpg" alt="Documentary feature thumbnail" loading="lazy">
+          <span class="clip-play">▶</span>
+        </div>
+        <div class="clip-meta">
+          <h3>Documentary Feature I</h3>
+          <p>Full-length documentary</p>
+          <span class="clip-tag">Documentary</span>
+        </div>
+      </a>
+
+      <a class="clip" data-cat="documentary" href="https://youtu.be/FNoXfL6XO0E" target="_blank" rel="noopener">
+        <div class="clip-thumb">
+          <img src="https://img.youtube.com/vi/FNoXfL6XO0E/hqdefault.jpg" alt="Documentary feature thumbnail" loading="lazy">
+          <span class="clip-play">▶</span>
+        </div>
+        <div class="clip-meta">
+          <h3>Documentary Feature II</h3>
+          <p>Full-length documentary</p>
+          <span class="clip-tag">Documentary</span>
+        </div>
+      </a>
+
+      <a class="clip" data-cat="documentary" href="https://youtu.be/ndMjfBrrE9M" target="_blank" rel="noopener">
+        <div class="clip-thumb">
+          <img src="https://img.youtube.com/vi/ndMjfBrrE9M/hqdefault.jpg" alt="Documentary feature thumbnail" loading="lazy">
+          <span class="clip-play">▶</span>
+        </div>
+        <div class="clip-meta">
+          <h3>Documentary Feature III</h3>
+          <p>Full-length documentary</p>
+          <span class="clip-tag">Documentary</span>
+        </div>
+      </a>
+
+      <a class="clip" data-cat="documentary" href="https://youtu.be/zbANkXpy7vM" target="_blank" rel="noopener">
+        <div class="clip-thumb">
+          <img src="https://img.youtube.com/vi/zbANkXpy7vM/hqdefault.jpg" alt="Documentary feature thumbnail" loading="lazy">
+          <span class="clip-play">▶</span>
+        </div>
+        <div class="clip-meta">
+          <h3>Documentary Feature IV</h3>
+          <p>Full-length documentary</p>
+          <span class="clip-tag">Documentary</span>
+        </div>
+      </a>
+
+      <a class="clip" data-cat="marketing" href="https://youtube.com/shorts/1mKxiSJtHhI" target="_blank" rel="noopener">
+        <div class="clip-thumb">
+          <img src="https://img.youtube.com/vi/1mKxiSJtHhI/hqdefault.jpg" alt="Ad campaign thumbnail" loading="lazy">
+          <span class="clip-play">▶</span>
+        </div>
+        <div class="clip-meta">
+          <h3>Ad Campaign</h3>
+          <p>Paid social ad</p>
+          <span class="clip-tag">Marketing &amp; Ads</span>
+        </div>
+      </a>
+
+      <a class="clip" data-cat="gameplay" href="https://youtu.be/IsxOoKV0YHo" target="_blank" rel="noopener">
+        <div class="clip-thumb">
+          <img src="https://img.youtube.com/vi/IsxOoKV0YHo/hqdefault.jpg" alt="Gameplay highlight reel thumbnail" loading="lazy">
+          <span class="clip-play">▶</span>
+        </div>
+        <div class="clip-meta">
+          <h3>Gameplay Highlight Reel</h3>
+          <p>Montage · Fast-paced editing</p>
+          <span class="clip-tag">Gameplay</span>
+        </div>
+      </a>
+
+      <a class="clip" data-cat="scitech" href="https://youtube.com/shorts/O2ckYTkuYi8" target="_blank" rel="noopener">
+        <div class="clip-thumb">
+          <img src="https://img.youtube.com/vi/O2ckYTkuYi8/hqdefault.jpg" alt="Science explainer thumbnail" loading="lazy">
+          <span class="clip-play">▶</span>
+        </div>
+        <div class="clip-meta">
+          <h3>Science Explainer</h3>
+          <p>Short-form · Science &amp; technology</p>
+          <span class="clip-tag">Science &amp; Tech</span>
+        </div>
+      </a>
+
+      <a class="clip" data-cat="music" href="https://youtube.com/shorts/jUoSd_fJjgg" target="_blank" rel="noopener">
+        <div class="clip-thumb">
+          <img src="https://img.youtube.com/vi/jUoSd_fJjgg/hqdefault.jpg" alt="Music video with motion design thumbnail" loading="lazy">
+          <span class="clip-play">▶</span>
+        </div>
+        <div class="clip-meta">
+          <h3>Music Video — Motion Design</h3>
+          <p>Short-form · Motion graphics</p>
+          <span class="clip-tag">Music &amp; Motion</span>
+        </div>
+      </a>
+
+      <a class="clip" data-cat="music" href="https://youtu.be/CEKTnawsfvU" target="_blank" rel="noopener">
+        <div class="clip-thumb">
+          <img src="https://img.youtube.com/vi/CEKTnawsfvU/hqdefault.jpg" alt="Music video thumbnail" loading="lazy">
+          <span class="clip-play">▶</span>
+        </div>
+        <div class="clip-meta">
+          <h3>Music Video</h3>
+          <p>Music video edit</p>
+          <span class="clip-tag">Music &amp; Motion</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-text">
+      <h2>About</h2>
+      <p>
+        I cut for impact. My background is in editing across very different
+        worlds — long-form documentary, fast-turnaround ad campaigns, gameplay
+        content built for retention, and science communication that has to
+        stay accurate and still move. What ties it together is pacing: every
+        cut earns its place.
+      </p>
+      <p>
+        I'm based in Brazil and currently focused on taking that work
+        international — building relationships with clients and studios
+        outside Latin America, and adapting my storytelling to different
+        markets without losing the rhythm that makes it mine.
+      </p>
+    </div>
+    <dl class="about-meta">
+      <div class="about-row">
+        <dt>Based in</dt>
+        <dd>Brazil — working with clients worldwide</dd>
+      </div>
+      <div class="about-row">
+        <dt>Focus</dt>
+        <dd>Documentary · Marketing &amp; Ads · Gameplay · Science &amp; Tech</dd>
+      </div>
+      <div class="about-row">
+        <dt>Style</dt>
+        <dd>Cinematic, high-contrast, fast-paced</dd>
+      </div>
+      <div class="about-row">
+        <dt>Status</dt>
+        <dd>Available for freelance &amp; remote projects</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills">
+    <h2>Tools &amp; skills</h2>
+    <div class="skills-grid">
+      <span class="skill-tag">Premiere Pro</span>
+      <span class="skill-tag">After Effects</span>
+      <span class="skill-tag">DaVinci Resolve</span>
+      <span class="skill-tag">Color Grading</span>
+      <span class="skill-tag">Motion Graphics</span>
+      <span class="skill-tag">Sound Design</span>
+      <span class="skill-tag">Storytelling</span>
+      <span class="skill-tag">Pacing &amp; Rhythm</span>
+      <span class="skill-tag">Photoshop</span>
+      <span class="skill-tag">Multicam Editing</span>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Let's tell your story.</h2>
+    <p>Open to freelance and remote editing work — reach out and let's talk about your project.</p>
+    <a class="contact-email" href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+    <div class="socials">
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">YouTube</a>
+      <a href="#" target="_blank" rel="noopener">Vimeo</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>© 2026 M. Rios. All footage used with permission.</span>
+  <span>Edited in Brazil. Built for the world.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
