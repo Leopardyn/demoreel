@@ -28,7 +28,10 @@
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
-  <div class="tc-readout" id="tcReadout">00:00:00:00</div>
+  <div class="header-right">
+    <div class="tc-readout" id="tcReadout">00:00:00:00</div>
+    <a class="header-cta" href="mailto:leonardo_lira@id.uff.br">Get in touch</a>
+  </div>
 </header>
 
 <main id="top">
@@ -80,11 +83,15 @@
 
     <div class="filters" role="tablist" aria-label="Filter projects by category">
       <button class="filter-btn is-active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="documentary">Documentary</button>
-      <button class="filter-btn" data-filter="marketing">Marketing &amp; Ads</button>
-      <button class="filter-btn" data-filter="gameplay">Gameplay</button>
-      <button class="filter-btn" data-filter="scitech">Science &amp; Tech</button>
-      <button class="filter-btn" data-filter="music">Music &amp; Motion</button>
+      <button class="filter-btn" data-filter="documentary" data-preview="https://img.youtube.com/vi/hXjXUwRm4xw/hqdefault.jpg">Documentary</button>
+      <button class="filter-btn" data-filter="marketing" data-preview="https://img.youtube.com/vi/1mKxiSJtHhI/hqdefault.jpg">Marketing &amp; Ads</button>
+      <button class="filter-btn" data-filter="gameplay" data-preview="https://img.youtube.com/vi/IsxOoKV0YHo/hqdefault.jpg">Gameplay</button>
+      <button class="filter-btn" data-filter="scitech" data-preview="https://img.youtube.com/vi/O2ckYTkuYi8/hqdefault.jpg">Science &amp; Tech</button>
+      <button class="filter-btn" data-filter="music" data-preview="https://img.youtube.com/vi/jUoSd_fJjgg/hqdefault.jpg">Music &amp; Motion</button>
+    </div>
+
+    <div class="filter-preview" id="filterPreview" aria-hidden="true">
+      <img id="filterPreviewImg" src="" alt="">
     </div>
 
     <div class="bin" id="bin">
@@ -163,7 +170,7 @@
 
       <a class="clip" data-cat="marketing" href="https://youtube.com/shorts/LiyJ20jHyTE" target="_blank" rel="noopener">
         <div class="clip-thumb">
-          <img src="https://img.youtube.com/vi/1mKxiSJtHhI/hqdefault.jpg" alt="Ad campaign thumbnail" loading="lazy">
+          <img src="https://img.youtube.com/vi/LiyJ20jHyTE/hqdefault.jpg" alt="Ad for Gen Z thumbnail" loading="lazy">
           <span class="clip-play">▶</span>
         </div>
         <div class="clip-meta">
@@ -175,7 +182,7 @@
 
       <a class="clip" data-cat="marketing" href="https://youtube.com/shorts/uza8jN7gAoM" target="_blank" rel="noopener">
         <div class="clip-thumb">
-          <img src="https://img.youtube.com/vi/1mKxiSJtHhI/hqdefault.jpg" alt="Ad campaign thumbnail" loading="lazy">
+          <img src="https://img.youtube.com/vi/uza8jN7gAoM/hqdefault.jpg" alt="Military prep ad thumbnail" loading="lazy">
           <span class="clip-play">▶</span>
         </div>
         <div class="clip-meta">
@@ -187,7 +194,7 @@
 
       <a class="clip" data-cat="marketing" href="https://youtube.com/shorts/RnOGdIVGkws" target="_blank" rel="noopener">
         <div class="clip-thumb">
-          <img src="https://img.youtube.com/vi/1mKxiSJtHhI/hqdefault.jpg" alt="Ad campaign thumbnail" loading="lazy">
+          <img src="https://img.youtube.com/vi/RnOGdIVGkws/hqdefault.jpg" alt="Ad for Gen Z, second edit, thumbnail" loading="lazy">
           <span class="clip-play">▶</span>
         </div>
         <div class="clip-meta">
@@ -308,15 +315,17 @@
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <h2>Let's tell your story.</h2>
-    <p>Open to freelance and remote editing work — reach out and let's talk about your project.</p>
-    <a class="contact-email" href="mailto:leonardo_lira@id.uff.br">Available for freelance projects → Get in touch</a>
-    <div class="socials">
-      <a href="https://www.instagram.com/leopardyn/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.linkedin.com/in/leo-lira/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://x.com/leonardylira" target="_blank" rel="noopener">X</a>
+    <div class="contact-panel">
+      <span class="contact-status"><span class="rec-dot"></span>Available for freelance &amp; remote work</span>
+      <h2>Let's tell your story.</h2>
+      <p>Open to freelance and remote editing work — reach out and let's talk about your project.</p>
+      <a class="contact-email" href="mailto:leonardo_lira@id.uff.br">leonardo_lira@id.uff.br</a>
+      <div class="socials">
+        <a href="https://www.instagram.com/leopardyn/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/leo-lira/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/leonardylira" target="_blank" rel="noopener">X</a>
+      </div>
     </div>
-
   </section>
 
 </main>

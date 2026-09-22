@@ -38,3 +38,35 @@
     });
   });
 })();
+
+// Hover preview: a small thumbnail appears near the hovered filter button,
+// giving visitors a preview of that category before they click.
+(function filterHoverPreview() {
+  const buttons = document.querySelectorAll('.filter-btn[data-preview]');
+  const preview = document.getElementById('filterPreview');
+  const previewImg = document.getElementById('filterPreviewImg');
+  if (!buttons.length || !preview || !previewImg) return;
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('mouseenter', () => {
+      const src = btn.dataset.preview;
+      previewImg.src = src;
+      previewImg.alt = `${btn.textContent.trim()} preview`;
+      preview.style.left = `${btn.offsetLeft}px`;
+      preview.classList.add('is-visible');
+    });
+    btn.addEventListener('mouseleave', () => {
+      preview.classList.remove('is-visible');
+    });
+    btn.addEventListener('focus', () => {
+      const src = btn.dataset.preview;
+      previewImg.src = src;
+      previewImg.alt = `${btn.textContent.trim()} preview`;
+      preview.style.left = `${btn.offsetLeft}px`;
+      preview.classList.add('is-visible');
+    });
+    btn.addEventListener('blur', () => {
+      preview.classList.remove('is-visible');
+    });
+  });
+})();
