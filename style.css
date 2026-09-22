@@ -83,7 +83,7 @@ h1, h2, h3 {
 }
 .logo-dot {
   font-family: var(--font-body);
-  font-size: 0.65rem;
+  font-size: 0.9rem;
   color: var(--accent);
   letter-spacing: 0.08em;
 }
