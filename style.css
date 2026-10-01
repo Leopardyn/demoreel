@@ -181,7 +181,11 @@ h1, h2, h3 {
 }
 .hero-meta-left { left: 42px; }
 .hero-meta-right { right: 42px; }
-@media (max-width: 720px) { .hero-meta { top: 70px; } .hero-meta-left, .hero-meta-right { left: 20px; right: 20px; } }
+@media (max-width: 720px) {
+  .hero-meta { top: 70px; }
+  .hero-meta-left { left: 20px; right: auto; }
+  .hero-meta-right { right: 20px; left: auto; text-align: right; }
+}
 
 .hero-title {
   font-size: clamp(2.6rem, 8vw, 6rem);
