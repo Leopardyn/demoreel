@@ -279,6 +279,10 @@
       <p>
         Have a project in mind? → <a href="#contact" class="contact-link">Contact</a>
       </p>
+      <p class="about-footnote">
+        Before editing video, I spent two years designing in Photoshop.
+        <button type="button" class="gallery-link" id="openGallery">View early design work →</button>
+      </p>
 
     </div>
     <dl class="about-meta">
@@ -340,6 +344,45 @@
   <span>© 2026 Leo. Lyra. All footage used with permission.</span>
   <span>Edited in Brazil. Built for the world.</span>
 </footer>
+
+<!-- EARLY WORK GALLERY (modal, opened from About) -->
+<div class="gallery-modal" id="galleryModal" aria-hidden="true" role="dialog" aria-label="Early design work gallery">
+  <div class="gallery-modal-backdrop" id="galleryBackdrop"></div>
+  <div class="gallery-modal-panel">
+    <button type="button" class="gallery-close" id="galleryClose" aria-label="Close gallery">✕</button>
+
+    <div class="gallery-intro">
+      <span class="gallery-kicker">Before the cut — 2017–2019</span>
+      <h3>Early design work</h3>
+      <p>Two years in Photoshop before I ever touched a timeline — composition, color and
+        detail work that still shapes how I frame a shot today. All original artwork, no AI.</p>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <button type="button" class="gallery-item" data-full="images/early-work-modern.jpg" data-caption="Modern — editorial headline design over scientific source material">
+        <img src="images/thumbs/early-work-modern.jpg" alt="Bold editorial graphic headline 'Temperaturas batem recorde no oceano' over a stack of scientific paper excerpts, modern poster style" loading="lazy">
+      </button>
+      <button type="button" class="gallery-item" data-full="images/early-work-retrowave-collage.jpg" data-caption="Retrowave Collage — surrealist composite, ocean warming feature">
+        <img src="images/thumbs/early-work-retrowave-collage.jpg" alt="Surrealist retrowave collage of a sea turtle wearing a rose collar with a woman sunbathing on its shell, sunset gradient background" loading="lazy">
+      </button>
+      <button type="button" class="gallery-item" data-full="images/early-work-90s.jpg" data-caption="90's — retro poster design, ocean temperature feature">
+        <img src="images/thumbs/early-work-90s.jpg" alt="Retro 90s-style poster with a close-up dolphin photo and bold headline about record ocean temperatures" loading="lazy">
+      </button>
+      <button type="button" class="gallery-item" data-full="images/early-work-pop-art.jpg" data-caption="Pop Art — comic halftone treatment, climate science feature">
+        <img src="images/thumbs/early-work-pop-art.jpg" alt="Pop-art comic-style illustration with halftone texture depicting a global warming headline and a sea turtle" loading="lazy">
+      </button>
+      <button type="button" class="gallery-item gallery-item--tall" data-full="images/early-work-ynae.jpg" data-caption="Ynae — cyberpunk portrait collage, personal brand piece">
+        <img src="images/thumbs/early-work-ynae.jpg" alt="Cyberpunk-style portrait collage of a woman with rainbow eye makeup, mechanical face panels and Japanese typography" loading="lazy">
+      </button>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button type="button" class="lightbox-back" id="lightboxBack" aria-label="Back to gallery">← Back</button>
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>

@@ -39,6 +39,61 @@
   });
 })();
 
+// Early-work gallery modal, opened from the About section.
+// Keeps the main page layout untouched — nothing here affects page height.
+(function earlyWorkGallery() {
+  const openBtn = document.getElementById('openGallery');
+  const modal = document.getElementById('galleryModal');
+  const backdrop = document.getElementById('galleryBackdrop');
+  const closeBtn = document.getElementById('galleryClose');
+  const grid = document.getElementById('galleryGrid');
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxBack = document.getElementById('lightboxBack');
+
+  if (!openBtn || !modal) return;
+
+  function openModal() {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    lightbox.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+  function openLightbox(src, caption) {
+    lightboxImg.src = src;
+    lightboxImg.alt = caption;
+    lightboxCaption.textContent = caption;
+    lightbox.classList.add('is-open');
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+  }
+
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+  lightboxBack.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if (lightbox.classList.contains('is-open')) closeLightbox();
+    else if (modal.classList.contains('is-open')) closeModal();
+  });
+
+  grid.querySelectorAll('.gallery-item').forEach((item) => {
+    item.addEventListener('click', () => {
+      openLightbox(item.dataset.full, item.dataset.caption);
+    });
+  });
+})();
+
 // Hover preview: a small thumbnail appears near the hovered filter button,
 // giving visitors a preview of that category before they click.
 (function filterHoverPreview() {
