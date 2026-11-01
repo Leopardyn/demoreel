@@ -32,7 +32,7 @@
 
       const filter = btn.dataset.filter;
       clips.forEach((clip) => {
-        const match = filter === 'all' || clip.dataset.cat === filter;
+        const match = filter === 'all' || clip.dataset.cat.split(' ').includes(filter);
         clip.classList.toggle('is-hidden', !match);
       });
     });
